@@ -1,9 +1,22 @@
+var optfile = require('../libs/optfile')
+
 // 根据pathname值 找到对应的处理函数
 module.exports = {
   login: function(req, res) {
-    res.write('我是登录函数')
+    function recall(data) {
+      res.write(data)
+      res.end()
+    }
+    optfile.readfile('./views/login.html', recall)
   },
   demo: function(req, res) {
     res.write('我是DEMO')
+  },
+  writefile: function(req, res) {
+    function recall(data) {
+      res.write(data)
+      res.end()
+    }
+    optfile.writefile('./views/xz.txt', '我是小郑', recall)
   }
 }
