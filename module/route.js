@@ -8,10 +8,11 @@ module.exports = {
       res.write(data)
       res.end()
     }
-    optfile.readfile('./views/login.html', recall)
+    optfile.readfile('../views/login.html', recall)
   },
   demo: function(req, res) {
     res.write('我是DEMO')
+    res.end()
   },
   writefile: function(req, res) {
     function recall(data) {

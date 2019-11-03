@@ -10,8 +10,9 @@ module.exports = {
     fs.readFile(path, function(err, data) {
       if(err) {
         console.log(err)
+        callback(err.toString())
       } else{
-        console.log('readfile',data.toString())
+        // console.log('readfile',data.toString())
         callback(data.toString())
       }
     })
