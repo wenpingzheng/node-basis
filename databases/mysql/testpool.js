@@ -3,6 +3,7 @@ var OptPool = require('./OptPool');
 var optPool = new OptPool();
 var pool = optPool.getPool();
 
+
 // 从连接池获取连接
 pool.getConnection(function (err, conn) {
   //----插入 
